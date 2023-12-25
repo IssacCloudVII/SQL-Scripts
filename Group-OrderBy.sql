@@ -10,5 +10,6 @@
 ----Select * from EmployeeSalary order by 2
 
 --select * from EmployeeDemographics order by age
-
 --Select gender, age, count(distinct gender) as genderAgeGroups from EmployeeDemographics group by gender, age
+
+Select jobtitle, count(jobTitle) as JobTitleCount, avg(salary) as SalaryAverage from EmployeeSalary group by JobTitle
