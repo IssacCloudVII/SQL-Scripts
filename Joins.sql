@@ -25,3 +25,5 @@
 --Select firstname, lastname, JobTitle, salary from EmployeeDemographics
 --inner join EmployeeSalary
 --on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID order by salary desc --Know which is the one who earns most and its job title and its salary.
+
+select gender, avg(Salary) as AvgSalaryGender, count(gender) as CountGender from EmployeeSalary inner join EmployeeDemographics on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID group by gender --Know the average salary of each gender
